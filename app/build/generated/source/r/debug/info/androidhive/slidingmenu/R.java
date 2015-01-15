@@ -34,22 +34,41 @@ public final class R {
     }
     public static final class drawable {
         public static final int counter_bg=0x7f020000;
-        public static final int ic_but=0x7f020001;
-        public static final int ic_communities=0x7f020002;
-        public static final int ic_drawer=0x7f020003;
-        public static final int ic_equipe=0x7f020004;
-        public static final int ic_home=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int ic_match=0x7f020007;
-        public static final int ic_news=0x7f020008;
-        public static final int ic_pages=0x7f020009;
-        public static final int ic_people=0x7f02000a;
-        public static final int ic_photos=0x7f02000b;
-        public static final int ic_whats_hot=0x7f02000c;
-        public static final int ig_groupe=0x7f02000d;
-        public static final int list_item_bg_normal=0x7f02000e;
-        public static final int list_item_bg_pressed=0x7f02000f;
-        public static final int list_selector=0x7f020010;
+        public static final int equip_afrik_sud=0x7f020001;
+        public static final int equip_algerie=0x7f020002;
+        public static final int equip_burkina_faso=0x7f020003;
+        public static final int equip_cameroun=0x7f020004;
+        public static final int equip_cap_vert=0x7f020005;
+        public static final int equip_ci=0x7f020006;
+        public static final int equip_congo=0x7f020007;
+        public static final int equip_gabon=0x7f020008;
+        public static final int equip_ghana=0x7f020009;
+        public static final int equip_guinee=0x7f02000a;
+        public static final int equip_guinne_quat=0x7f02000b;
+        public static final int equip_mali=0x7f02000c;
+        public static final int equip_rd=0x7f02000d;
+        public static final int equip_senegal=0x7f02000e;
+        public static final int equip_tunise=0x7f02000f;
+        public static final int equip_zambie=0x7f020010;
+        public static final int ic_action_about=0x7f020011;
+        public static final int ic_action_settings=0x7f020012;
+        public static final int ic_but=0x7f020013;
+        public static final int ic_communities=0x7f020014;
+        public static final int ic_drawer=0x7f020015;
+        public static final int ic_equipe=0x7f020016;
+        public static final int ic_home=0x7f020017;
+        public static final int ic_launcher=0x7f020018;
+        public static final int ic_match=0x7f020019;
+        public static final int ic_myteam=0x7f02001a;
+        public static final int ic_news=0x7f02001b;
+        public static final int ic_pages=0x7f02001c;
+        public static final int ic_people=0x7f02001d;
+        public static final int ic_photos=0x7f02001e;
+        public static final int ic_whats_hot=0x7f02001f;
+        public static final int ig_groupe=0x7f020020;
+        public static final int list_item_bg_normal=0x7f020021;
+        public static final int list_item_bg_pressed=0x7f020022;
+        public static final int list_selector=0x7f020023;
     }
     public static final class id {
         public static final int action_help=0x7f0b0008;

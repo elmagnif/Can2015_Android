@@ -21,12 +21,19 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int counter_text_bg=0x7f060000;
-        public static final int counter_text_color=0x7f060001;
-        public static final int list_background=0x7f060002;
-        public static final int list_background_pressed=0x7f060003;
-        public static final int list_divider=0x7f060004;
-        public static final int list_item_title=0x7f060005;
+        public static final int col_black=0x7f060000;
+        public static final int col_jaune=0x7f060001;
+        public static final int col_jaunemoutarde=0x7f060002;
+        public static final int col_maron=0x7f060003;
+        public static final int col_rouge=0x7f060004;
+        public static final int col_vert=0x7f060005;
+        public static final int col_white=0x7f060006;
+        public static final int counter_text_bg=0x7f060007;
+        public static final int counter_text_color=0x7f060008;
+        public static final int list_background=0x7f060009;
+        public static final int list_background_pressed=0x7f06000a;
+        public static final int list_divider=0x7f06000b;
+        public static final int list_item_title=0x7f06000c;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f070000;
@@ -84,12 +91,20 @@ public final class R {
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int drawer_list_item=0x7f030001;
-        public static final int fragment_community=0x7f030002;
-        public static final int fragment_find_people=0x7f030003;
-        public static final int fragment_home=0x7f030004;
-        public static final int fragment_pages=0x7f030005;
-        public static final int fragment_photos=0x7f030006;
-        public static final int fragment_whats_hot=0x7f030007;
+        public static final int fragment_apropos=0x7f030002;
+        public static final int fragment_butteurs=0x7f030003;
+        public static final int fragment_community=0x7f030004;
+        public static final int fragment_equipes=0x7f030005;
+        public static final int fragment_find_people=0x7f030006;
+        public static final int fragment_groupes=0x7f030007;
+        public static final int fragment_home=0x7f030008;
+        public static final int fragment_matchs=0x7f030009;
+        public static final int fragment_mesequipes=0x7f03000a;
+        public static final int fragment_news=0x7f03000b;
+        public static final int fragment_pages=0x7f03000c;
+        public static final int fragment_photos=0x7f03000d;
+        public static final int fragment_reglages=0x7f03000e;
+        public static final int fragment_whats_hot=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

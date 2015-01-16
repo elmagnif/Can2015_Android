@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableRow
+            android:layout_height="13dp"
+            android:layout_width="fill_parent"
+            android:background="@color/col_jaunemoutarde"
+
+            >
+
+            <TextView
+                android:background="@color/col_jaunemoutarde"
+                android:text="2015-01-17"
+                android:textColor="@color/col_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                style="@android:style/TextAppearance.DeviceDefault.SearchResult.Title"
+                android:textSize="16dp" />
+
+            <TextView
+                android:background="@color/col_vert"
+                android:text="Bata Stadium"
+                android:textColor="@color/col_white"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:textAlignment="gravity"
+                style="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title" />
+            </TableRow>
+
+        <TableRow
+            android:layout_height="13dp"
+            android:layout_width="fill_parent"
+
+
+            android:baselineAligned="true">
+            <TextView
+
+                android:text="Premier Tour - Groupe A"
+                android:textColor="@color/col_black"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textStyle="italic" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="13dp"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            >
+
+            <ImageView
+                android:src="@drawable/equip_guinne_quat"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <TextView
+
+                android:text="Guinnée Equatoriale"
+                android:textColor="@color/col_black"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textStyle="italic" />
+
+            <TextView
+
+                android:text="-"
+                android:textColor="@color/col_black"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                />
+
+            <TextView
+
+                android:text=" Congo"
+                android:textColor="@color/col_black"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textStyle="italic" />
+            <ImageView
+                android:src="@drawable/equip_congo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="fill_horizontal"
+
+                />
+
+        </TableRow>
+    <TableRow>
+    </TableRow>
+    </TableLayout>
+
+</LinearLayout>

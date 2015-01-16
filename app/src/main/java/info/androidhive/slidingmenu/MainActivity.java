@@ -2,12 +2,18 @@ package info.androidhive.slidingmenu;
 
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
+import info.androidhive.slidingmenu.model.PageNews;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -43,6 +49,32 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+        //Notification Matches
+        Calendar Calendar_Object = Calendar.getInstance();
+        Calendar_Object.set(Calendar.MONTH, 0);
+        Calendar_Object.set(Calendar.YEAR, 2015);
+        Calendar_Object.set(Calendar.DAY_OF_MONTH, 15);
+        Calendar_Object.set(Calendar.HOUR_OF_DAY, 16);
+        Calendar_Object.set(Calendar.MINUTE, 58);
+        Calendar_Object.set(Calendar.SECOND, 0);
+        // MyView is my current Activity, and AlarmReceiver is the
+        Calendar_Object.setTimeZone(TimeZone.getTimeZone("GMT"));
+        // BroadCastReceiver
+        Intent myIntent = new Intent(MainActivity.this, AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this,0, myIntent, 0);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+		/*
+		 * The following sets the Alarm in the specific time by getting the long
+		 * value of the alarm date time which is in calendar object by calling
+		 * the getTimeInMillis(). Since Alarm supports only long value , we're
+		 * using this method.
+		 */
+
+        alarmManager.set(AlarmManager.RTC, Calendar_Object.getTimeInMillis(),pendingIntent);
+
+        //End Notifications
+
 		mTitle = mDrawerTitle = getTitle();
 
 		// load slide menu items
@@ -61,21 +93,21 @@ public class MainActivity extends Activity {
 		// Acceuil
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
         // Mes Equipes
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[8], navMenuIcons.getResourceId(8, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
 		// Matchs
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
 		// Groupe
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "4"));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "4"));
 		// News
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "10"));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1), true, "10"));
 		// Butteurs
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
         //Equipes
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "16"));
-		// Paramétres
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1), true, "16"));
+		// Reglages
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
         //A propos
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[8], navMenuIcons.getResourceId(8, -1)));
 		
 
 		// Recycle the typed array
@@ -173,20 +205,31 @@ public class MainActivity extends Activity {
 			fragment = new HomeFragment();
 			break;
 		case 1:
-			fragment = new FindPeopleFragment();
+			fragment = new PageMesEquipes();
 			break;
 		case 2:
-			fragment = new PhotosFragment();
+			fragment = new PageMatchs();
 			break;
 		case 3:
-			fragment = new CommunityFragment();
+			fragment = new PageGroupe();
 			break;
 		case 4:
-			fragment = new PagesFragment();
+			fragment = new PageNews();
 			break;
 		case 5:
-			fragment = new WhatsHotFragment();
+			fragment = new PageButteurs();
 			break;
+
+        case 6:
+            fragment = new PageEquipes();
+            break;
+
+        case 7:
+            fragment = new PageReglages();
+            break;
+        case 8:
+            fragment = new PageApropos();
+            break;
 
 		default:
 			break;
